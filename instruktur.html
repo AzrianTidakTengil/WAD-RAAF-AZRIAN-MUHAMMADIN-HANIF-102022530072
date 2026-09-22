@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instruktur - Manajemen Instruktur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'linen': { 50: '#f8f3ec', 100: '#f2e7d9', 200: '#e5cfb3', 300: '#d8b78d', 400: '#cba067', 500: '#be8841', 600: '#986d34', 700: '#725127', 800: '#4c361a', 900: '#261b0d', 950: '#1b1309' },
+                        'golden-chestnut': { 50: '#f8f2ec', 100: '#f1e5da', 200: '#e4cab4', 300: '#d6b08f', 400: '#c99669', 500: '#bb7c44', 600: '#966336', 700: '#704a29', 800: '#4b311b', 900: '#25190e', 950: '#1a1109' },
+                        'espresso': { 50: '#f8efec', 100: '#f1dfda', 200: '#e3bfb5', 300: '#d69f8f', 400: '#c87e6a', 500: '#ba5e45', 600: '#954b37', 700: '#703929', 800: '#4a261c', 900: '#25130e', 950: '#1a0d0a' },
+                        'toffee-brown': { 50: '#f8f1ed', 100: '#f0e3db', 200: '#e2c7b6', 300: '#d3ab92', 400: '#c58f6d', 500: '#b67349', 600: '#925c3a', 700: '#6d452c', 800: '#492e1d', 900: '#24170f', 950: '#1a100a' },
+                        'desert-sand': { 50: '#f8f1ed', 100: '#f1e3da', 200: '#e3c7b5', 300: '#d5aa90', 400: '#c78e6b', 500: '#b97246', 600: '#945b38', 700: '#6f442a', 800: '#4a2e1c', 900: '#25170e', 950: '#1a100a' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-linen-50 min-h-screen flex flex-col font-sans">
+    
+    <nav class="bg-espresso-900 text-linen-50 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold flex items-center gap-2">
+                OrangHebat
+            </h1>
+            <ul class="flex gap-6">
+                <li><a href="index.html" class="hover:text-golden-chestnut-300 transition">Beranda</a></li>
+                <li><a href="instruktur.html" class="hover:text-golden-chestnut-300 font-semibold border-b-2 border-linen-50 pb-1">Instruktur</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-8 flex-grow">
+        <div class="bg-white rounded-2xl shadow-sm border border-linen-200 p-6">
+            <div class="flex flex-col justify-between items-center mb-6 gap-4">
+                <div class="flex w-full gap-3">
+                    <div class="relative w-full">
+                        <i data-lucide="search" class="absolute left-3 top-2.5 w-5 h-5 text-linen-400"></i>
+                        <input type="text" placeholder="Cari nama atau lisensi..." class="w-full pl-10 pr-4 py-2 border border-linen-200 rounded-lg focus:outline-none focus:border-golden-chestnut-400 focus:ring-1 focus:ring-golden-chestnut-400 text-sm">
+                    </div>
+                    <select class="border border-linen-200 rounded-lg px-6 py-2 text-sm text-espresso-900 focus:outline-none focus:border-golden-chestnut-400">
+                        <option value="">Semua Keahlian</option>
+                        <option value="angkat-beban">Angkat Beban</option>
+                        <option value="yoga">Yoga</option>
+                        <option value="zumba">Zumba</option>
+                    </select>
+                </div>
+            </div>
+                
+            <div class="overflow-x-auto rounded-lg border border-linen-200">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="bg-linen-100 border-b border-linen-200 text-sm">
+                            <th class="p-4 font-semibold text-espresso-900">Nama Pelatih</th>
+                            <th class="p-4 font-semibold text-espresso-900">Lisensi</th>
+                            <th class="p-4 font-semibold text-espresso-900">Jenis Lisensi</th>
+                            <th class="p-4 font-semibold text-espresso-900">Cabang Olahraga</th>
+                            <th class="p-4 font-semibold text-espresso-900">Status</th>
+                            <th class="p-4 font-semibold text-espresso-900 text-center">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-linen-200 text-sm">
+                        <tr class="hover:bg-linen-50 transition group">
+                            <td class="p-4 font-medium text-espresso-900">Rian Hidayat</td>
+                            <td class="p-4"><span class="bg-desert-sand-50 text-desert-sand-800 text-xs px-2.5 py-1 rounded-md font-mono border border-desert-sand-200">RI-CAFT-10293</span></td>
+                            <td class="p-4 text-toffee-brown-800">Asosiasi Lokal</td>
+                            <td class="p-4 text-toffee-brown-800">Angkat Beban (Bodybuilding)</td>
+                            <td class="p-4"><span class="text-xs font-semibold px-2 py-1 bg-amber-100 text-amber-700 rounded-full">Disewa</span></td>
+                            <td class="p-4 flex justify-center gap-3">
+                                <a href="#" title="Edit" class="text-toffee-brown-500 hover:text-toffee-brown-800"><i data-lucide="edit" class="w-4 h-4"></i></a>
+                                <a href="#" title="Hapus" class="text-espresso-400 hover:text-espresso-700"><i data-lucide="trash-2" class="w-4 h-4"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-linen-50 transition group">
+                            <td class="p-4 font-medium text-espresso-900">Deni Setiawan</td>
+                            <td class="p-4"><span class="bg-desert-sand-50 text-desert-sand-800 text-xs px-2.5 py-1 rounded-md font-mono border border-desert-sand-200">CFT-APKI-2025-089</span></td>
+                            <td class="p-4 text-toffee-brown-800">Asosiasi Lokal</td>
+                            <td class="p-4 text-toffee-brown-800">Calisthenics & Street Workout</td>
+                            <td class="p-4"><span class="text-xs font-semibold px-2 py-1 bg-amber-100 text-amber-700 rounded-full">Disewa</span></td>
+                            <td class="p-4 flex justify-center gap-3">
+                                <a href="#" title="Edit" class="text-toffee-brown-500 hover:text-toffee-brown-800"><i data-lucide="edit" class="w-4 h-4"></i></a>
+                                <a href="#" title="Hapus" class="text-espresso-400 hover:text-espresso-700"><i data-lucide="trash-2" class="w-4 h-4"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-linen-50 transition group">
+                            <td class="p-4 font-medium text-espresso-900">Budi Santoso, S.Or.</td>
+                            <td class="p-4"><span class="bg-desert-sand-50 text-desert-sand-800 text-xs px-2.5 py-1 rounded-md font-mono border border-desert-sand-200">FIT.08.0215.0003425.2026</span></td>
+                            <td class="p-4 text-toffee-brown-800">Nasional (BNSP-RI)</td>
+                            <td class="p-4 text-toffee-brown-800">Angkat Beban (Weightlifting & Fitness)</td>
+                            <td class="p-4"><span class="text-xs font-semibold px-2 py-1 bg-red-200 text-red-700 rounded-full">Cuti</span></td>
+                            <td class="p-4 flex justify-center gap-3">
+                                <a href="#" title="Edit" class="text-toffee-brown-500 hover:text-toffee-brown-800"><i data-lucide="edit" class="w-4 h-4"></i></a>
+                                <a href="#" title="Hapus" class="text-espresso-400 hover:text-espresso-700"><i data-lucide="trash-2" class="w-4 h-4"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-linen-50 transition group">
+                            <td class="p-4 font-medium text-espresso-900">Siti Rahmawati</td>
+                            <td class="p-4"><span class="bg-desert-sand-50 text-desert-sand-800 text-xs px-2.5 py-1 rounded-md font-mono border border-desert-sand-200">YA-RYT200-98342</span></td>
+                            <td class="p-4 text-toffee-brown-800">Internasional</td>
+                            <td class="p-4 text-toffee-brown-800">Yoga (Vinyasa & Hatha)</td>
+                            <td class="p-4"><span class="text-xs font-semibold px-2 py-1 bg-green-200 text-green-700 rounded-full">Tersedia</span></td>
+                            <td class="p-4 flex justify-center gap-3">
+                                <a href="#" title="Edit" class="text-toffee-brown-500 hover:text-toffee-brown-800"><i data-lucide="edit" class="w-4 h-4"></i></a>
+                                <a href="#" title="Hapus" class="text-espresso-400 hover:text-espresso-700"><i data-lucide="trash-2" class="w-4 h-4"></i></a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-linen-50 transition group">
+                            <td class="p-4 font-medium text-espresso-900">Jessica Amanda</td>
+                            <td class="p-4"><span class="bg-desert-sand-50 text-desert-sand-800 text-xs px-2.5 py-1 rounded-md font-mono border border-desert-sand-200">ZIN-ID-772910</span></td>
+                            <td class="p-4 text-toffee-brown-800">Internasional (Lisensi Resmi Merek)</td>
+                            <td class="p-4 text-toffee-brown-800">Zumba & Dance Fitness</td>
+                            <td class="p-4"><span class="text-xs font-semibold px-2 py-1 bg-green-200 text-green-700 rounded-full">Tersedia</span></td>
+                            <td class="p-4 flex justify-center gap-3">
+                                <a href="#" title="Edit" class="text-toffee-brown-500 hover:text-toffee-brown-800"><i data-lucide="edit" class="w-4 h-4"></i></a>
+                                <a href="#" title="Hapus" class="text-espresso-400 hover:text-espresso-700"><i data-lucide="trash-2" class="w-4 h-4"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="flex justify-between items-center mt-6">
+                <p class="text-sm text-linen-600">Menampilkan 1-5 dari 24 Data</p>
+                <div class="flex gap-1">
+                    <button class="px-3 py-1 border border-linen-200 rounded text-linen-500 hover:bg-linen-100 text-sm">Prev</button>
+                    <button class="px-3 py-1 bg-golden-chestnut-600 text-white rounded shadow-sm text-sm">1</button>
+                    <button class="px-3 py-1 border border-linen-200 rounded text-espresso-800 hover:bg-linen-100 text-sm">2</button>
+                    <button class="px-3 py-1 border border-linen-200 rounded text-espresso-800 hover:bg-linen-100 text-sm">3</button>
+                    <button class="px-3 py-1 border border-linen-200 rounded text-espresso-800 hover:bg-linen-100 text-sm">Next</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-espresso-950 text-linen-300 mt-auto">
+        <div class="container mx-auto px-6 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+                <div class="max-w-sm">
+                    <h3 class="text-lg font-semibold text-golden-chestnut-400 mb-2">
+                        Kelompok 3 &bull; Modul Instruktur & Coach
+                    </h3>
+                    <p class="text-sm text-linen-500 leading-relaxed">
+                        Pengelolaan data instruktur / pelatih mitra venue, nomor lisensi, dan keahlian cabang olahraga.
+                    </p>
+                </div>
+
+                <div class="bg-espresso-900/50 p-5 rounded-xl border border-espresso-800 w-full md:w-auto">
+                    <div class="flex items-center gap-4">
+                        <img class="w-12 h-12 rounded-full" src="https://media.licdn.com/dms/image/v2/D4E03AQHn9173NvdG3Q/profile-displayphoto-scale_200_200/B4EaDIAJs6HIAg-/0/1790061880780?e=1791417600&v=beta&t=BUpRcE1tysPdHFNQoQjeFXc7XZWoGPwBD45cduXWiig"/>
+                        <div>
+                            <p class="font-bold text-linen-50 text-base">Azrian Muhamadin Hanif</p>
+                            <p class="text-sm text-golden-chestnut-400 font-mono mt-0.5">102022530072</p>
+                            <p class="text-xs text-linen-400 mt-1">System Information &bull; Batch 2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="border-t border-espresso-900 bg-espresso-950/80">
+            <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-linen-500">&copy; 2026 OrangHebat. Hak Cipta Dilindungi.</p>
+                <p class="text-xs text-espresso-400 flex items-center gap-1">
+                    Tugas Individu &bull; Week 1
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
