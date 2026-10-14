@@ -1,40 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda - Manajemen Instruktur</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'linen': { 50: '#f8f3ec', 100: '#f2e7d9', 200: '#e5cfb3', 300: '#d8b78d', 400: '#cba067', 500: '#be8841', 600: '#986d34', 700: '#725127', 800: '#4c361a', 900: '#261b0d', 950: '#1b1309' },
-                        'golden-chestnut': { 50: '#f8f2ec', 100: '#f1e5da', 200: '#e4cab4', 300: '#d6b08f', 400: '#c99669', 500: '#bb7c44', 600: '#966336', 700: '#704a29', 800: '#4b311b', 900: '#25190e', 950: '#1a1109' },
-                        'espresso': { 50: '#f8efec', 100: '#f1dfda', 200: '#e3bfb5', 300: '#d69f8f', 400: '#c87e6a', 500: '#ba5e45', 600: '#954b37', 700: '#703929', 800: '#4a261c', 900: '#25130e', 950: '#1a0d0a' },
-                        'toffee-brown': { 50: '#f8f1ed', 100: '#f0e3db', 200: '#e2c7b6', 300: '#d3ab92', 400: '#c58f6d', 500: '#b67349', 600: '#925c3a', 700: '#6d452c', 800: '#492e1d', 900: '#24170f', 950: '#1a100a' },
-                        'desert-sand': { 50: '#f8f1ed', 100: '#f1e3da', 200: '#e3c7b5', 300: '#d5aa90', 400: '#c78e6b', 500: '#b97246', 600: '#945b38', 700: '#6f442a', 800: '#4a2e1c', 900: '#25170e', 950: '#1a100a' }
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-linen-50 min-h-screen flex flex-col font-sans">
-    
-    <nav class="bg-espresso-900 text-linen-50 shadow-md z-10">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold flex items-center gap-2">
-                OrangHebat
-            </h1>
-            <ul class="flex gap-6">
-                <li><a href="index.html" class="hover:text-golden-chestnut-300 font-semibold border-b-2 border-linen-50 pb-1">Beranda</a></li>
-                <li><a href="instruktur.html" class="hover:text-golden-chestnut-300 transition">Instruktur</a></li>
-            </ul>
-        </div>
-    </nav>
+<?php include("./components/header.php");?>
 
     <main class="container mx-auto px-6 py-8 flex-grow">
         
@@ -128,44 +92,4 @@
         </div>
     </main>
 
-    <footer class="bg-espresso-950 text-linen-300 mt-auto">
-        <div class="container mx-auto px-6 py-10">
-            <div class="flex flex-col md:flex-row justify-between items-start gap-8">
-                <div class="max-w-sm">
-                    <h3 class="text-lg font-semibold text-golden-chestnut-400 mb-2">
-                        Kelompok 3 &bull; Modul Instruktur & Coach
-                    </h3>
-                    <p class="text-sm text-linen-500 leading-relaxed">
-                        Pengelolaan data instruktur / pelatih mitra venue, nomor lisensi, dan keahlian cabang olahraga.
-                    </p>
-                </div>
-
-                <div class="bg-espresso-900/50 p-5 rounded-xl border border-espresso-800 w-full md:w-auto">
-                    <div class="flex items-center gap-4">
-                        <img class="w-12 h-12 rounded-full" src="https://media.licdn.com/dms/image/v2/D4E03AQHn9173NvdG3Q/profile-displayphoto-scale_200_200/B4EaDIAJs6HIAg-/0/1790061880780?e=1791417600&v=beta&t=BUpRcE1tysPdHFNQoQjeFXc7XZWoGPwBD45cduXWiig"/>
-                        <div>
-                            <p class="font-bold text-linen-50 text-base">Azrian Muhamadin Hanif</p>
-                            <p class="text-sm text-golden-chestnut-400 font-mono mt-0.5">102022530072</p>
-                            <p class="text-xs text-linen-400 mt-1">System Information &bull; Batch 2025</p>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-
-        <div class="border-t border-espresso-900 bg-espresso-950/80">
-            <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-linen-500">&copy; 2026 OrangHebat. Hak Cipta Dilindungi.</p>
-                <p class="text-xs text-espresso-400 flex items-center gap-1">
-                    Tugas Individu &bull; Week 1
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        lucide.createIcons();
-    </script>
-</body>
-</html>
+<?php include("./components/footer.php");?>
