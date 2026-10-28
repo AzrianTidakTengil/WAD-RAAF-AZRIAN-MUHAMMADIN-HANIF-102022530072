@@ -12,7 +12,7 @@
 
                 <div class="bg-espresso-900/50 p-5 rounded-xl border border-espresso-800 w-full md:w-auto">
                     <div class="flex items-center gap-4">
-                        <img class="w-12 h-12 rounded-full" src="assets/img/azrian.png"/>
+                        <img class="w-12 h-12 rounded-full" src=""/>
                         <div>
                             <p class="font-bold text-linen-50 text-base">Azrian Muhamadin Hanif</p>
                             <p class="text-sm text-golden-chestnut-400 font-mono mt-0.5">102022530072</p>

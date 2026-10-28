@@ -1,0 +1,95 @@
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/forms';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../storage/framework/views/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
+
+@theme {
+  --font-sans:
+    Figtree, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --color-linen-50: #f8f3ec;
+  --color-linen-100: #f2e7d9;
+  --color-linen-200: #e5cfb3;
+  --color-linen-300: #d8b78d;
+  --color-linen-400: #cba067;
+  --color-linen-500: #be8841;
+  --color-linen-600: #986d34;
+  --color-linen-700: #725127;
+  --color-linen-800: #4c361a;
+  --color-linen-900: #261b0d;
+  --color-linen-950: #1b1309;
+
+  --color-golden-chestnut-50: #f8f2ec;
+  --color-golden-chestnut-100: #f1e5da;
+  --color-golden-chestnut-200: #e4cab4;
+  --color-golden-chestnut-300: #d6b08f;
+  --color-golden-chestnut-400: #c99669;
+  --color-golden-chestnut-500: #bb7c44;
+  --color-golden-chestnut-600: #966336;
+  --color-golden-chestnut-700: #704a29;
+  --color-golden-chestnut-800: #4b311b;
+  --color-golden-chestnut-900: #25190e;
+  --color-golden-chestnut-950: #1a1109;
+
+  --color-espresso-50: #f8efec;
+  --color-espresso-100: #f1dfda;
+  --color-espresso-200: #e3bfb5;
+  --color-espresso-300: #d69f8f;
+  --color-espresso-400: #c87e6a;
+  --color-espresso-500: #ba5e45;
+  --color-espresso-600: #954b37;
+  --color-espresso-700: #703929;
+  --color-espresso-800: #4a261c;
+  --color-espresso-900: #25130e;
+  --color-espresso-950: #1a0d0a;
+
+  --color-toffee-brown-50: #f8f1ed;
+  --color-toffee-brown-100: #f0e3db;
+  --color-toffee-brown-200: #e2c7b6;
+  --color-toffee-brown-300: #d3ab92;
+  --color-toffee-brown-400: #c58f6d;
+  --color-toffee-brown-500: #b67349;
+  --color-toffee-brown-600: #925c3a;
+  --color-toffee-brown-700: #6d452c;
+  --color-toffee-brown-800: #492e1d;
+  --color-toffee-brown-900: #24170f;
+  --color-toffee-brown-950: #1a100a;
+
+  --color-desert-sand-50: #f8f1ed;
+  --color-desert-sand-100: #f1e3da;
+  --color-desert-sand-200: #e3c7b5;
+  --color-desert-sand-300: #d5aa90;
+  --color-desert-sand-400: #c78e6b;
+  --color-desert-sand-500: #b97246;
+  --color-desert-sand-600: #945b38;
+  --color-desert-sand-700: #6f442a;
+  --color-desert-sand-800: #4a2e1c;
+  --color-desert-sand-900: #25170e;
+  --color-desert-sand-950: #1a100a;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
